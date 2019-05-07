@@ -1,0 +1,137 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxItems": {
+            "required": false,
+            "type": "string"
+        },
+        "NextToken": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CertificateStatuses": {
+                    "description": "Filter the certificate list by status value.",
+                    "items": {
+                        "enum": [
+                            "PENDING_VALIDATION",
+                            "ISSUED",
+                            "INACTIVE",
+                            "EXPIRED",
+                            "VALIDATION_TIMED_OUT",
+                            "REVOKED",
+                            "FAILED"
+                        ],
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Includes": {
+                    "description": "Filter the certificate list. For more information, see the <a>Filters</a> structure.",
+                    "properties": {
+                        "extendedKeyUsage": {
+                            "description": "Specify one or more <a>ExtendedKeyUsage</a> extension values.",
+                            "items": {
+                                "enum": [
+                                    "TLS_WEB_SERVER_AUTHENTICATION",
+                                    "TLS_WEB_CLIENT_AUTHENTICATION",
+                                    "CODE_SIGNING",
+                                    "EMAIL_PROTECTION",
+                                    "TIME_STAMPING",
+                                    "OCSP_SIGNING",
+                                    "IPSEC_END_SYSTEM",
+                                    "IPSEC_TUNNEL",
+                                    "IPSEC_USER",
+                                    "ANY",
+                                    "NONE",
+                                    "CUSTOM"
+                                ],
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "keyTypes": {
+                            "description": "Specify one or more algorithms that can be used to generate key pairs.",
+                            "items": {
+                                "enum": [
+                                    "RSA_2048",
+                                    "RSA_1024",
+                                    "RSA_4096",
+                                    "EC_prime256v1",
+                                    "EC_secp384r1",
+                                    "EC_secp521r1"
+                                ],
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "keyUsage": {
+                            "description": "Specify one or more <a>KeyUsage</a> extension values.",
+                            "items": {
+                                "enum": [
+                                    "DIGITAL_SIGNATURE",
+                                    "NON_REPUDIATION",
+                                    "KEY_ENCIPHERMENT",
+                                    "DATA_ENCIPHERMENT",
+                                    "KEY_AGREEMENT",
+                                    "CERTIFICATE_SIGNING",
+                                    "CRL_SIGNING",
+                                    "ENCIPHER_ONLY",
+                                    "DECIPHER_ONLY",
+                                    "ANY",
+                                    "CUSTOM"
+                                ],
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "MaxItems": {
+                    "description": "Use this parameter when paginating results to specify the maximum number of items to return in the response. If additional items exist beyond the number you specify, the <code>NextToken</code> element is sent in the response. Use this <code>NextToken</code> value in a subsequent request to retrieve additional items.",
+                    "maximum": 1000,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "NextToken": {
+                    "description": "Use this parameter only when paginating results and only in a subsequent request after you receive a response with truncated results. Set it to the value of <code>NextToken</code> from the response you just received.",
+                    "maxLength": 320,
+                    "minLength": 1,
+                    "pattern": "[\\u0009\\u000A\\u000D\\u0020-\\u00FF]*",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
