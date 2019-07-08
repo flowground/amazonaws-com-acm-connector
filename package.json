@@ -1,7 +1,7 @@
 {
     "name": "amazonaws-com-acm-connector",
     "version": "2015.0.0",
-    "description": "<fullname>AWS Certificate Manager</fullname> <p>Welcome to the AWS Certificate Manager (ACM) API documentation.</p> <p>You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information about using ACM, see the <a href=\"http://docs.aws.amazon.com/acm/latest/userguide/\"> <i>AWS Certificate Manager User Guide</i> </a>.</p>",
+    "description": "AWS Certificate Manager Welcome to the AWS Certificate Manager (ACM) API\ndocumentation.\n\nYou can use ACM to manage SSL/TLS certificates for your AWS-based websites and\napplications. For general information about using ACM, see the AWS Certificate\nManager User Guide [http://docs.aws.amazon.com/acm/latest/userguide/].",
     "main": "component.json",
     "dependencies": {
         "elasticio-node": "0.0.9",
